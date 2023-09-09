@@ -2,7 +2,7 @@
 // @generated from protobuf file "generation.proto" (package "gooseai", syntax proto3)
 // tslint:disable
 import { ServiceType } from "@protobuf-ts/runtime-rpc";
-import type { BinaryWriteOptions } from "@protobuf-ts/runtime";
+import type { BinaryWriteOptions,MessageType } from "@protobuf-ts/runtime";
 import type { IBinaryWriter } from "@protobuf-ts/runtime";
 import { WireType } from "@protobuf-ts/runtime";
 import type { BinaryReadOptions } from "@protobuf-ts/runtime";
@@ -11,7 +11,6 @@ import { UnknownFieldHandler } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
-import { MessageType } from "@protobuf-ts/runtime";
 import { Struct } from "./google/protobuf/struct";
 import { Tensor } from "./tensors";
 /**
@@ -1483,8 +1482,8 @@ class Tokens$Type extends MessageType<Tokens> {
     }
     internalBinaryWrite(message: Tokens, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
         /* repeated gooseai.Token tokens = 1; */
-        for (let i = 0; i < message.tokens.length; i++)
-            Token.internalBinaryWrite(message.tokens[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.tokens)
+            Token.internalBinaryWrite(element, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
         /* optional string tokenizer_id = 2; */
         if (message.tokenizerId !== undefined)
             writer.tag(2, WireType.LengthDelimited).string(message.tokenizerId);
@@ -2316,14 +2315,14 @@ class GuidanceInstanceParameters$Type extends MessageType<GuidanceInstanceParame
     }
     internalBinaryWrite(message: GuidanceInstanceParameters, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
         /* repeated gooseai.Model models = 2; */
-        for (let i = 0; i < message.models.length; i++)
-            Model.internalBinaryWrite(message.models[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.models)
+            Model.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         /* optional float guidance_strength = 3; */
         if (message.guidanceStrength !== undefined)
             writer.tag(3, WireType.Bit32).float(message.guidanceStrength);
         /* repeated gooseai.GuidanceScheduleParameters schedule = 4; */
-        for (let i = 0; i < message.schedule.length; i++)
-            GuidanceScheduleParameters.internalBinaryWrite(message.schedule[i], writer.tag(4, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.schedule)
+            GuidanceScheduleParameters.internalBinaryWrite(element, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
         /* optional gooseai.CutoutParameters cutouts = 5; */
         if (message.cutouts)
             CutoutParameters.internalBinaryWrite(message.cutouts, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
@@ -2382,8 +2381,8 @@ class GuidanceParameters$Type extends MessageType<GuidanceParameters> {
         if (message.guidancePreset !== 0)
             writer.tag(1, WireType.Varint).int32(message.guidancePreset);
         /* repeated gooseai.GuidanceInstanceParameters instances = 2; */
-        for (let i = 0; i < message.instances.length; i++)
-            GuidanceInstanceParameters.internalBinaryWrite(message.instances[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.instances)
+            GuidanceInstanceParameters.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -2537,8 +2536,8 @@ class ImageParameters$Type extends MessageType<ImageParameters> {
         /* repeated uint32 seed = 3; */
         if (message.seed.length) {
             writer.tag(3, WireType.LengthDelimited).fork();
-            for (let i = 0; i < message.seed.length; i++)
-                writer.uint32(message.seed[i]);
+            for (const element of message.seed)
+                writer.uint32(element);
             writer.join();
         }
         /* optional uint64 samples = 4; */
@@ -2551,8 +2550,8 @@ class ImageParameters$Type extends MessageType<ImageParameters> {
         if (message.transform)
             TransformType.internalBinaryWrite(message.transform, writer.tag(6, WireType.LengthDelimited).fork(), options).join();
         /* repeated gooseai.StepParameter parameters = 7; */
-        for (let i = 0; i < message.parameters.length; i++)
-            StepParameter.internalBinaryWrite(message.parameters[i], writer.tag(7, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.parameters)
+            StepParameter.internalBinaryWrite(element, writer.tag(7, WireType.LengthDelimited).fork(), options).join();
         /* optional gooseai.MaskedAreaInit masked_area_init = 8; */
         if (message.maskedAreaInit !== undefined)
             writer.tag(8, WireType.Varint).int32(message.maskedAreaInit);
@@ -2680,8 +2679,8 @@ class ClassifierCategory$Type extends MessageType<ClassifierCategory> {
         if (message.name !== "")
             writer.tag(1, WireType.LengthDelimited).string(message.name);
         /* repeated gooseai.ClassifierConcept concepts = 2; */
-        for (let i = 0; i < message.concepts.length; i++)
-            ClassifierConcept.internalBinaryWrite(message.concepts[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.concepts)
+            ClassifierConcept.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         /* optional float adjustment = 3; */
         if (message.adjustment !== undefined)
             writer.tag(3, WireType.Bit32).float(message.adjustment);
@@ -2744,11 +2743,11 @@ class ClassifierParameters$Type extends MessageType<ClassifierParameters> {
     }
     internalBinaryWrite(message: ClassifierParameters, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
         /* repeated gooseai.ClassifierCategory categories = 1; */
-        for (let i = 0; i < message.categories.length; i++)
-            ClassifierCategory.internalBinaryWrite(message.categories[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.categories)
+            ClassifierCategory.internalBinaryWrite(element, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
         /* repeated gooseai.ClassifierCategory exceeds = 2; */
-        for (let i = 0; i < message.exceeds.length; i++)
-            ClassifierCategory.internalBinaryWrite(message.exceeds[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.exceeds)
+            ClassifierCategory.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         /* optional gooseai.Action realized_action = 3; */
         if (message.realizedAction !== undefined)
             writer.tag(3, WireType.Varint).int32(message.realizedAction);
@@ -2807,8 +2806,8 @@ class InterpolateParameters$Type extends MessageType<InterpolateParameters> {
         /* repeated float ratios = 1; */
         if (message.ratios.length) {
             writer.tag(1, WireType.LengthDelimited).fork();
-            for (let i = 0; i < message.ratios.length; i++)
-                writer.float(message.ratios[i]);
+            for (const element of message.ratios)
+                writer.float(element);
             writer.join();
         }
         /* optional gooseai.InterpolateMode mode = 2; */
@@ -3029,8 +3028,8 @@ class TransformMatrix$Type extends MessageType<TransformMatrix> {
         /* repeated float data = 1 [packed = true]; */
         if (message.data.length) {
             writer.tag(1, WireType.LengthDelimited).fork();
-            for (let i = 0; i < message.data.length; i++)
-                writer.float(message.data[i]);
+            for (const element of message.data)
+                writer.float(element);
             writer.join();
         }
         let u = options.writeUnknownFields;
@@ -3533,8 +3532,8 @@ class Answer$Type extends MessageType<Answer> {
         if (message.meta)
             AnswerMeta.internalBinaryWrite(message.meta, writer.tag(6, WireType.LengthDelimited).fork(), options).join();
         /* repeated gooseai.Artifact artifacts = 7; */
-        for (let i = 0; i < message.artifacts.length; i++)
-            Artifact.internalBinaryWrite(message.artifacts[i], writer.tag(7, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.artifacts)
+            Artifact.internalBinaryWrite(element, writer.tag(7, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -3587,8 +3586,8 @@ class AnswerBatch$Type extends MessageType<AnswerBatch> {
         if (message.batchId !== "")
             writer.tag(1, WireType.LengthDelimited).string(message.batchId);
         /* repeated gooseai.Answer answers = 2; */
-        for (let i = 0; i < message.answers.length; i++)
-            Answer.internalBinaryWrite(message.answers[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.answers)
+            Answer.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -3698,8 +3697,8 @@ class Request$Type extends MessageType<Request> {
         if (message.requestedType !== 0)
             writer.tag(3, WireType.Varint).int32(message.requestedType);
         /* repeated gooseai.Prompt prompt = 4; */
-        for (let i = 0; i < message.prompt.length; i++)
-            Prompt.internalBinaryWrite(message.prompt[i], writer.tag(4, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.prompt)
+            Prompt.internalBinaryWrite(element, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
         /* gooseai.ImageParameters image = 5; */
         if (message.params.oneofKind === "image")
             ImageParameters.internalBinaryWrite(message.params.image, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
@@ -3784,8 +3783,8 @@ class OnStatus$Type extends MessageType<OnStatus> {
         /* repeated gooseai.FinishReason reason = 1; */
         if (message.reason.length) {
             writer.tag(1, WireType.LengthDelimited).fork();
-            for (let i = 0; i < message.reason.length; i++)
-                writer.int32(message.reason[i]);
+            for (const element of message.reason)
+                writer.int32(element);
             writer.join();
         }
         /* optional string target = 2; */
@@ -3794,8 +3793,8 @@ class OnStatus$Type extends MessageType<OnStatus> {
         /* repeated gooseai.StageAction action = 3; */
         if (message.action.length) {
             writer.tag(3, WireType.LengthDelimited).fork();
-            for (let i = 0; i < message.action.length; i++)
-                writer.int32(message.action[i]);
+            for (const element of message.action)
+                writer.int32(element);
             writer.join();
         }
         let u = options.writeUnknownFields;
@@ -3857,8 +3856,8 @@ class Stage$Type extends MessageType<Stage> {
         if (message.request)
             Request.internalBinaryWrite(message.request, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         /* repeated gooseai.OnStatus on_status = 3; */
-        for (let i = 0; i < message.onStatus.length; i++)
-            OnStatus.internalBinaryWrite(message.onStatus[i], writer.tag(3, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.onStatus)
+            OnStatus.internalBinaryWrite(element, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
@@ -3911,8 +3910,8 @@ class ChainRequest$Type extends MessageType<ChainRequest> {
         if (message.requestId !== "")
             writer.tag(1, WireType.LengthDelimited).string(message.requestId);
         /* repeated gooseai.Stage stage = 2; */
-        for (let i = 0; i < message.stage.length; i++)
-            Stage.internalBinaryWrite(message.stage[i], writer.tag(2, WireType.LengthDelimited).fork(), options).join();
+        for (const element of message.stage)
+            Stage.internalBinaryWrite(element, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
