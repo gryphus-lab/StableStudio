@@ -1,8 +1,8 @@
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1em; margin: 4em 0;">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1em; margin: 4em 0;">
 
-<img src="./misc/Banner.png" />
-<img src="./misc/GenerateScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;" />
-<img src="./misc/EditScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;" />
+<img src="./misc/Banner.png"  alt=""/>
+<img src="./misc/GenerateScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;"  alt=""/>
+<img src="./misc/EditScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;"  alt=""/>
 
 <h3>👋 Welcome to StableStudio, the open-source version of <a href="https://dreamstudio.ai" target="_blank">DreamStudio</a>!</h3>
 
@@ -46,7 +46,7 @@ StableStudio will be running at [localhost:3000](http://localhost:3000) by defau
 # <a id="about" href="#about">About</a>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
-  <img src="./misc/PainterWithRobot.png" style="flex-grow: 1; flex-shrink: 1;" />
+  <img src="./misc/PainterWithRobot.png" style="flex-grow: 1; flex-shrink: 1;"  alt=""/>
 </div>
 
 StableStudio is [Stability AI](https://stability.ai)'s official open-source variant of [DreamStudio](https://www.dreamstudio.ai), our user interface for generative AI. It is a web-based application that allows users to create and edit generated images. We're not entirely sure where this project is going just yet, but we're excited to see what the community does with it!
@@ -74,7 +74,7 @@ _Yes!_ Stability's hosted deployment of StableStudio will remain [DreamStudio](h
 # <a id="contributing" href="#contributing">🧑‍💻 Contributing</a>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
-  <img src="./misc/ProgrammingRobots.png" style="flex-grow: 1; flex-shrink: 1;" />
+  <img src="./misc/ProgrammingRobots.png" style="flex-grow: 1; flex-shrink: 1;"  alt=""/>
 </div>
 
 _**Community contributions are encouraged!**_
