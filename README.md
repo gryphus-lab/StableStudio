@@ -4,13 +4,19 @@
 <img src="./misc/GenerateScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;"  alt=""/>
 <img src="./misc/EditScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;"  alt=""/>
 
-<h3>👋 Welcome to StableStudio, the open-source version of <a href="https://dreamstudio.ai" target="_blank">DreamStudio</a>!</h3>
+<h3>👋 Welcome to StableStudio, the open-source version of <a href="https://dreamstudio.ai" target="_blank">
+DreamStudio</a>!</h3>
 
 **🗺 Contents – [🚀 Quick Start](#quick-start) · [ℹ️ About](#about) · [🙋 FAQ](#faq) · [🧑‍💻 Contributing](#contributing)**
 
-**📚 Documentation – [🎨 UI](./packages/stablestudio-ui/README.md) · [🔌 Plugins](./packages/stablestudio-plugin/README.md) · <a href="https://platform.stability.ai" target="_blank">⚡️ platform.stability.ai</a>**
+**📚
+Documentation – [🎨 UI](./packages/stablestudio-ui/README.md) · [🔌 Plugins](./packages/stablestudio-plugin/README.md) · <a href="https://platform.stability.ai" target="_blank">
+⚡️ platform.stability.ai</a>**
 
-**🔗 Links – <a href="https://discord.com/channels/1002292111942635562/1108055793674227782" target="_blank">🎮 Discord</a> · <a href="https://dreamstudio.ai" target="_blank">🌈 DreamStudio</a> · <a href="https://github.com/Stability-AI/StableStudio/issues">🛟 Bugs & Support</a> · <a href="https://github.com/Stability-AI/StableStudio/discussions">💬 Discussion</a>**
+**🔗 Links – <a href="https://discord.com/channels/1002292111942635562/1108055793674227782" target="_blank">🎮
+Discord</a> · <a href="https://dreamstudio.ai" target="_blank">🌈
+DreamStudio</a> · <a href="https://github.com/Stability-AI/StableStudio/issues">🛟 Bugs &
+Support</a> · <a href="https://github.com/Stability-AI/StableStudio/discussions">💬 Discussion</a>**
 
 <br />
 <br />
@@ -19,7 +25,8 @@
 
 # <a id="quick-start" href="#quick-start">🚀 Quick Start</a>
 
-You'll need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. Then run the following commands to install dependencies and launch StableStudio.
+You'll need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed. Then run the following
+commands to install dependencies and launch StableStudio.
 
 ```bash
 git clone https://github.com/Stability-AI/StableStudio.git
@@ -41,7 +48,9 @@ yarn dev
 
 StableStudio will be running at [localhost:3000](http://localhost:3000) by default.
 
-> If you are using the default Stability API plugin, You'll need to have your [API key](https://platform.stability.ai/docs/getting-started/authentication) handy. Otherwise, you should be good to go!
+> If you are using the default Stability API plugin, You'll need to have
+> your [API key](https://platform.stability.ai/docs/getting-started/authentication) handy. Otherwise, you should be good
+> to go!
 
 # <a id="about" href="#about">About</a>
 
@@ -49,7 +58,10 @@ StableStudio will be running at [localhost:3000](http://localhost:3000) by defau
   <img src="./misc/PainterWithRobot.png" style="flex-grow: 1; flex-shrink: 1;"  alt=""/>
 </div>
 
-StableStudio is [Stability AI](https://stability.ai)'s official open-source variant of [DreamStudio](https://www.dreamstudio.ai), our user interface for generative AI. It is a web-based application that allows users to create and edit generated images. We're not entirely sure where this project is going just yet, but we're excited to see what the community does with it!
+StableStudio is [Stability AI](https://stability.ai)'s official open-source variant
+of [DreamStudio](https://www.dreamstudio.ai), our user interface for generative AI. It is a web-based application that
+allows users to create and edit generated images. We're not entirely sure where this project is going just yet, but
+we're excited to see what the community does with it!
 
 # <a id="faq" href="#faq">FAQ</a>
 
@@ -59,9 +71,11 @@ StableStudio is [Stability AI](https://stability.ai)'s official open-source vari
 
 *   We removed [DreamStudio](https://dreamstudio.ai)-specific branding.
 
-*   All "over-the-wire" API calls have been replaced by a [plugin system](./packages/stablestudio-plugin/README.md) which allows you to easily swap out the back-end.
+*   All "over-the-wire" API calls have been replaced by a [plugin system](./packages/stablestudio-plugin/README.md) which
+    allows you to easily swap out the back-end.
 
-    *   With a little bit of TypeScript, you can [create your own plugin](./packages/stablestudio-plugin/README.md) and use StableStudio with any back-end you want!
+    *   With a little bit of TypeScript, you can [create your own plugin](./packages/stablestudio-plugin/README.md) and
+        use StableStudio with any back-end you want!
 
 *   We removed Stability-specific account features such as billing, API key management, etc.
 
@@ -69,7 +83,8 @@ StableStudio is [Stability AI](https://stability.ai)'s official open-source vari
 
 ### Will [DreamStudio](https://dreamstudio.ai) still be supported?
 
-*Yes!* Stability's hosted deployment of StableStudio will remain [DreamStudio](https://dreamstudio.ai). It will continue to get updates and stay up-to-date with StableStudio whenever possible.
+*Yes!* Stability's hosted deployment of StableStudio will remain [DreamStudio](https://dreamstudio.ai). It will continue
+to get updates and stay up-to-date with StableStudio whenever possible.
 
 # <a id="contributing" href="#contributing">🧑‍💻 Contributing</a>
 
@@ -79,7 +94,8 @@ StableStudio is [Stability AI](https://stability.ai)'s official open-source vari
 
 ***Community contributions are encouraged!***
 
-**The UI package's [README](./packages/stablestudio-ui/README.md) is a great place to start.** Bug fixes, documentation, general clean-up, new features, etc. are all welcome.
+**The UI package's [README](./packages/stablestudio-ui/README.md) is a great place to start.** Bug fixes, documentation,
+general clean-up, new features, etc. are all welcome.
 
 Here are some useful links...
 

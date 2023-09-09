@@ -12,13 +12,16 @@
 
 # <a id="about" href="#about">ℹ️ About</a>
 
-This plugin enables StableStudio to run using [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui), which means you can generate images entirely on your own machine!
+This plugin enables StableStudio to run
+using [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui), which means you can generate
+images entirely on your own machine!
 
 Thanks goes to [Terry Jia](https://github.com/jtydhr88) for the original work on this plugin.
 
 # <a id="usage" href="#usage">⚙️ Usage</a>
 
-1.  First, you'll need to configure your local installation of `stable-diffusion-webui` to run without the UI and with CORS enabled.
+1.  First, you'll need to configure your local installation of `stable-diffusion-webui` to run without the UI and with
+    CORS enabled.
 
     **Windows**
 
@@ -34,7 +37,8 @@ Thanks goes to [Terry Jia](https://github.com/jtydhr88) for the original work on
 
 2.  Start `stable-diffusion-webui` and look for `INFO: Uvicorn running on http://127.0.0.1:7861`.
 
-    You can make sure everything is running correctly by checking to see if [`http://127.0.0.1:7861/docs`](http://127.0.0.1:7861/docs) displays API documentation.
+    You can make sure everything is running correctly by checking to see
+    if [`http://127.0.0.1:7861/docs`](http://127.0.0.1:7861/docs) displays API documentation.
 
 3.  Within your installation of StableStudio, run `yarn dev:use-webui-plugin`.
 
@@ -42,9 +46,11 @@ Thanks goes to [Terry Jia](https://github.com/jtydhr88) for the original work on
 
 ## <a id="image-history" href="#image-history">💾 Image History</a>
 
-To persist your image history, you'll need to install the [`sd-webui-StableStudio`](https://github.com/jtydhr88/sd-webui-StableStudio) extension for `stable-diffusion-webui`.
+To persist your image history, you'll need to install
+the [`sd-webui-StableStudio`](https://github.com/jtydhr88/sd-webui-StableStudio) extension for `stable-diffusion-webui`.
 
-> 🛑 Be wary installing third-party extensions for `stable-diffusion-webui`, it's always a good idea to check before running untrusted code.
+> 🛑 Be wary installing third-party extensions for `stable-diffusion-webui`, it's always a good idea to check before
+> running untrusted code.
 
 # <a id="features" href="#features">⭐️ Features</a>
 
