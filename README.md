@@ -37,7 +37,7 @@ yarn
 yarn dev
 ```
 
-_**That's it! 🎉**_
+***That's it! 🎉***
 
 StableStudio will be running at [localhost:3000](http://localhost:3000) by default.
 
@@ -55,21 +55,21 @@ StableStudio is [Stability AI](https://stability.ai)'s official open-source vari
 
 ### What's the difference between StableStudio and [DreamStudio](https://dreamstudio.ai)?
 
-_Not much!_ There are a few tweaks we made to make the project more community-friendly:
+*Not much!* There are a few tweaks we made to make the project more community-friendly:
 
-- We removed [DreamStudio](https://dreamstudio.ai)-specific branding.
+*   We removed [DreamStudio](https://dreamstudio.ai)-specific branding.
 
-- All "over-the-wire" API calls have been replaced by a [plugin system](./packages/stablestudio-plugin/README.md) which allows you to easily swap out the back-end.
+*   All "over-the-wire" API calls have been replaced by a [plugin system](./packages/stablestudio-plugin/README.md) which allows you to easily swap out the back-end.
 
-  - With a little bit of TypeScript, you can [create your own plugin](./packages/stablestudio-plugin/README.md) and use StableStudio with any back-end you want!
+    *   With a little bit of TypeScript, you can [create your own plugin](./packages/stablestudio-plugin/README.md) and use StableStudio with any back-end you want!
 
-- We removed Stability-specific account features such as billing, API key management, etc.
+*   We removed Stability-specific account features such as billing, API key management, etc.
 
-  - These features are still available at [DreamStudio's account page](https://dreamstudio.ai/account).
+    *   These features are still available at [DreamStudio's account page](https://dreamstudio.ai/account).
 
 ### Will [DreamStudio](https://dreamstudio.ai) still be supported?
 
-_Yes!_ Stability's hosted deployment of StableStudio will remain [DreamStudio](https://dreamstudio.ai). It will continue to get updates and stay up-to-date with StableStudio whenever possible.
+*Yes!* Stability's hosted deployment of StableStudio will remain [DreamStudio](https://dreamstudio.ai). It will continue to get updates and stay up-to-date with StableStudio whenever possible.
 
 # <a id="contributing" href="#contributing">🧑‍💻 Contributing</a>
 
@@ -77,13 +77,13 @@ _Yes!_ Stability's hosted deployment of StableStudio will remain [DreamStudio](h
   <img src="./misc/ProgrammingRobots.png" style="flex-grow: 1; flex-shrink: 1;"  alt=""/>
 </div>
 
-_**Community contributions are encouraged!**_
+***Community contributions are encouraged!***
 
 **The UI package's [README](./packages/stablestudio-ui/README.md) is a great place to start.** Bug fixes, documentation, general clean-up, new features, etc. are all welcome.
 
 Here are some useful links...
 
-- [Discussion](https://github.com/Stability-AI/StableStudio/discussions)
-- [Open Issues](https://github.com/Stability-AI/StableStudio/issues)
-- [Open Pull Requests](https://github.com/Stability-AI/StableStudio/pulls)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
+*   [Discussion](https://github.com/Stability-AI/StableStudio/discussions)
+*   [Open Issues](https://github.com/Stability-AI/StableStudio/issues)
+*   [Open Pull Requests](https://github.com/Stability-AI/StableStudio/pulls)
+*   [Code of Conduct](./CODE_OF_CONDUCT.md)

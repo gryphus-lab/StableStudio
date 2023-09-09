@@ -1,11 +1,11 @@
-var l = (t) => {
+let l = (t) => {
     let e,
       i = new Set(),
       r = (o, u) => {
         let s = typeof o == "function" ? o(e) : o;
         if (!Object.is(s, e)) {
           let g = e;
-          (e = u ?? typeof s != "object" ? s : Object.assign({}, e, s)),
+          (e = u ?? typeof s != "object" ? s : ({ ...e, ...s})),
             i.forEach((p) => p(e, g));
         }
       },
@@ -26,7 +26,7 @@ var l = (t) => {
   },
   d = (t) => (t ? l(t) : l),
   c = (t) => (e) => d((i, r) => t({ set: i, get: r, context: e }));
-var m = c(() => ({
+let m = c(() => ({
   manifest: {
     name: "Example Plugin",
     description: "An example plugin for StableStudio",

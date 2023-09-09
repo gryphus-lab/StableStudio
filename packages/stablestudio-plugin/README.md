@@ -10,7 +10,7 @@
 
 ### 🚧 👷 **PLUGINS ARE EXPERIMENTAL AND NOT FINAL** 🛠 🚧
 
-_The contract and implementation are [likely to change](https://github.com/Stability-AI/StableStudio/issues/3)..._
+*The contract and implementation are [likely to change](https://github.com/Stability-AI/StableStudio/issues/3)...*
 
 </div>
 
@@ -24,17 +24,17 @@ This means you can implement an entirely different inference stack, StableStudio
 
 There are currently three first-party plugins which are maintained in this repository:
 
-- [`stablestudio-plugin-stability`](../stablestudio-plugin-stability/src/index.ts) – The default plugin which uses [Stability's API](https://platform.stability.ai) for inference.
+*   [`stablestudio-plugin-stability`](../stablestudio-plugin-stability/src/index.ts) – The default plugin which uses [Stability's API](https://platform.stability.ai) for inference.
 
-  ```bash
-  yarn dev
-  ```
+    ```bash
+    yarn dev
+    ```
 
-- [`stablestudio-plugin-webui`](../stablestudio-plugin-webui/README.md) – This plugin uses [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) for inference.
+*   [`stablestudio-plugin-webui`](../stablestudio-plugin-webui/README.md) – This plugin uses [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) for inference.
 
-  ```bash
-  yarn dev:use-webui-plugin
-  ```
+    ```bash
+    yarn dev:use-webui-plugin
+    ```
 
 We are still figuring out a more scalable strategy for third-party plugins, [let us know what you think](https://github.com/Stability-AI/StableStudio/issues/3)!
 
@@ -42,17 +42,17 @@ We are still figuring out a more scalable strategy for third-party plugins, [let
 
 We're hoping this list expands [over time](#future), but here's what's available right now...
 
-- **🏞 Image Generation**
+*   **🏞 Image Generation**
 
-  All aspects of image generation are handled by plugins including the default input, how styles are implemented, how to fetch existing images, etc.
+    All aspects of image generation are handled by plugins including the default input, how styles are implemented, how to fetch existing images, etc.
 
-- **🪪 Plugin Manifest**
+*   **🪪 Plugin Manifest**
 
-  Plugins can provide a manifest with a markdown description, author details, version information, etc.
+    Plugins can provide a manifest with a markdown description, author details, version information, etc.
 
-- **⚙️ Plugin Settings**
+*   **⚙️ Plugin Settings**
 
-  Plugins can declare settings which are available to the user in the settings menu.
+    Plugins can declare settings which are available to the user in the settings menu.
 
 ## 🧪 Development
 
@@ -70,7 +70,7 @@ Any changes you make within the [example plugin](../stablestudio-plugin-example/
 
 **This is mainly a feature intended for developers, we're [likely to change](https://github.com/Stability-AI/StableStudio/issues/3) how plugins work for end-users.**
 
-_Never install plugins from untrusted sources!_
+*Never install plugins from untrusted sources!*
 
 Although they are sand-boxed to the browser, a malicious actor could read through your image history or steal your API key if you're not careful.
 
@@ -86,7 +86,7 @@ If loaded successfully, you'll see it in the settings menu...
 
 ![ExamplePlugin](../../misc/ExamplePlugin.png)
 
-✅ _**That's it!**_
+✅ ***That's it!***
 
 As of now, you can only have one active plugin at a time.
 
@@ -110,28 +110,28 @@ Plugins were mostly created to rip out calls to Stability's [gRPC API](https://p
 
 Here's what's on our mind when it comes to the future of StableStudio plugins...
 
-- **🧠 More Inference Stacks**
+*   **🧠 More Inference Stacks**
 
-  The default [Stability plugin](../stablestudio-plugin-stability/src/index.ts) enables inference relying on [Stability's API](../stablestudio-plugin-stability/src/index.ts), but we're hoping to expand support for local inference.
+    The default [Stability plugin](../stablestudio-plugin-stability/src/index.ts) enables inference relying on [Stability's API](../stablestudio-plugin-stability/src/index.ts), but we're hoping to expand support for local inference.
 
-  We're particularly interested in creating a plugin for using [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s [REST API](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/API).
+    We're particularly interested in creating a plugin for using [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui)'s [REST API](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/API).
 
-  Though it's not fully-ready, we're excited about the future of [WebGPU](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API), and would love to support it via a plugin.
+    Though it's not fully-ready, we're excited about the future of [WebGPU](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API), and would love to support it via a plugin.
 
-  _We've stubbed out two empty packages to house these potential plugins..._
+    *We've stubbed out two empty packages to house these potential plugins...*
 
-  [`stablestudio-plugin-webui`](../stablestudio-plugin-webui/src/index.ts)
+    [`stablestudio-plugin-webui`](../stablestudio-plugin-webui/src/index.ts)
 
-  [`stablestudio-plugin-webgpu`](../stablestudio-plugin-webgpu/src/index.ts)
+    [`stablestudio-plugin-webgpu`](../stablestudio-plugin-webgpu/src/index.ts)
 
-- **🎨 Deeper UI Extensibility**
+*   **🎨 Deeper UI Extensibility**
 
-  Currently plugins can only change "back-end" functionality. We'd love to allow plugins to create entire new features or modify existing ones.
+    Currently plugins can only change "back-end" functionality. We'd love to allow plugins to create entire new features or modify existing ones.
 
-- **🧱 Multiple Plugins**
+*   **🧱 Multiple Plugins**
 
-  Only one plugin can be loaded at a time with our current implementation. Allowing multiple plugins to play nicely with each other would be a huge win.
+    Only one plugin can be loaded at a time with our current implementation. Allowing multiple plugins to play nicely with each other would be a huge win.
 
-- **🛍 Plugin Library**
+*   **🛍 Plugin Library**
 
-  If there is enough interest and community momentum, we'd love to create a plugin library where users can easily install plugins from a curated list.
+    If there is enough interest and community momentum, we'd love to create a plugin library where users can easily install plugins from a curated list.
