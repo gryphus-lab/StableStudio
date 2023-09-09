@@ -5,7 +5,7 @@ let l = (t) => {
         let s = typeof o == "function" ? o(e) : o;
         if (!Object.is(s, e)) {
           let g = e;
-          (e = u ?? typeof s != "object" ? s : ({ ...e, ...s})),
+          (e = u ?? typeof s != "object" ? s : { ...e, ...s}),
             i.forEach((p) => p(e, g));
         }
       },
