@@ -10401,6 +10401,7 @@ __metadata:
     remark-stringify: ^10.0.3
     rimraf: ^5.0.1
     semver: ^7.5.4
+    ts-node: ^10.9.1
     yarn: ^1.22.19
   languageName: unknown
   linkType: soft
