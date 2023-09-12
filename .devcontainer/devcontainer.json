@@ -21,7 +21,8 @@
 	"portsAttributes": {
 		"3000": {
 			"label": "Application",
-			"onAutoForward": "openBrowserOnce"
+			"onAutoForward": "openBrowserOnce",
+			"protocol": "https"
 		}
 	}
 }
