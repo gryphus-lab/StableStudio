@@ -1,4 +1,4 @@
-<div align="center">
+<div>
 
 # 🔌 [`stable-diffusion-webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui) Plugin
 
@@ -64,6 +64,6 @@ Missing something? Please [let us know](https://github.com/Stability-AI/StableSt
 *   \[x] Masking, in-painting, and out-painting
 *   \[x] Settings storage
 *   \[x] Accurate plugin status
-*   \[x] [Loading existing images]("#image-history)
+*   \[x] [Loading existing images](#image-history)
 *   \[x] Upscaling
 *   \[ ] Lora support
