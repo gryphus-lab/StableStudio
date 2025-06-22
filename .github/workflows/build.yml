@@ -2,7 +2,7 @@ name: Build
 on:
  push:
    branches:
-     - master
+     - main
  pull_request:
    types: [opened, synchronize, reopened]
 jobs:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
           matrix:
-            node-version: [16.x, 18.x]
+            node-version: [22.x, 24.x]
             # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v3
