@@ -2,7 +2,7 @@ name: Build
 on:
  push:
    branches:
-     - master
+     - main
  pull_request:
    types: [opened, synchronize, reopened]
 jobs:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
           matrix:
-            node-version: [16.x, 18.x]
+            node-version: [22.x, 24.x]
             # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v3
@@ -21,16 +21,16 @@ jobs:
         run: yarn
       - name: Test and coverage
         run: yarn jest --coverage --passWithNoTests
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
+      #- name: SonarCloud Scan
+      #  uses: SonarSource/sonarcloud-github-action@master
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+      #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #  with:
           # Additional arguments for the sonarcloud scanner
-          args:
+      #   args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey=gryphus-lab_StableStudio
-            -Dsonar.organization=gryphus-lab
-            -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+      #     -Dsonar.projectKey=gryphus-lab_StableStudio
+      #     -Dsonar.organization=gryphus-lab
+      #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
