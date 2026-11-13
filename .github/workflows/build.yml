@@ -1,22 +1,30 @@
 name: Build
 on:
- push:
-   branches:
-     - master
- pull_request:
-   types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
     strategy:
-          matrix:
-            node-version: [16.x, 18.x]
-            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+      # Don't let one Node version cancel the other.
+      fail-fast: false
+      matrix:
+        # Yarn 4 (packageManager: yarn@4.x) requires Node >= 18, so EOL Node 16
+        # was dropped. Test on the current maintained LTS lines.
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [18.x, 20.x]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          fetch-depth: 0
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn
       - name: Test and coverage
